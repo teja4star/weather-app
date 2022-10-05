@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Weather App</title>
+    <style>
+      body{
+        background-image: url(https://images.pexels.com/photos/1108234/pexels-photo-1108234.jpeg?auto=compress&cs=tinysrgw=600);
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row city-form">
+        <div class="col-8">
+          <form id="city-form">
+            <input
+              type="text"
+              class="form-control"
+              id="input-city"
+              placeholder="Enter City"
+              autocomplete="off"
+            />
+          
+        </div>
+        <div class="col-1">
+          <button type="submit" class="btn btn-dark">Search</button>
+        </div>
+                <div class="col-1">
+          <button type="submit" class="btn btn-info" id="current-btn">CURRENT LOCATION</button>
+        </div>
+        </form>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <img src="" alt="" class="current-day" id="icon" />
+        </div>
+
+        <div class="col-2 current-city" id="delhi">
+          <img src="images/location.png" alt="location" class="location-pin" />
+          <h1 class="location" >DELHI</h1>
+          <br />
+           <p class="date"></p> 
+          <h1 class="current-temp"></h1>
+          <p class="degrees">
+            <a href="#" id="fahrenheit-link">°F </a>|
+            <a href="#" id="celsius-link">°C</a>
+          </p>
+        </div>
+         
+        <div class="col-4 current-stats">
+
+          <img src="images/humidity.png" alt="humidity" class="small-icons" />
+          <p class="humidity">% </p>
+          <br />
+          <img src="images/wind.png" alt="wind" class="small-icons" />
+          <p class="wind">mph </p>
+        </div>
+      </div><br> <br> <br><br><br><br> 
+      <div class="the-week" id="forecast">
+      </div>
+    </div> <!--This is end of container div.-->
+   
+    <script src="src/index.js"></script>
+  </body>
+</html>
